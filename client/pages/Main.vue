@@ -1,13 +1,14 @@
 <template>
-  <h1 class="text-center text-pink-600 text-3xl">THE MAIN COMPONENT</h1>
+  <div>
+    <router-link to="/auth/login">Login</router-link>
+    <router-link to="/auth/register">Register</router-link>
+    <router-view></router-view>
+  </div>
 </template>
 
 <script>
-export default {
-
-}
+export default {};
 </script>
 
 <style>
-
 </style>
