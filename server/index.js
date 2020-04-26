@@ -1,10 +1,14 @@
 import Express from 'express'
 import Mongoose from 'mongoose'
+import config from './config'
 
-Mongoose.connect('mongodb://localhost:27017/moonshine', { useNewUrlParser: true, useUnifiedTopology: true })
+Mongoose.connect(config.databaseUrl, {
+	useNewUrlParser: true,
+	useUnifiedTopology: true,
+})
 
 const app = Express()
 
 app.listen(3000, () => {
-	console.log('server listening intently.')
+	console.log(`server listening intently.`)
 })
