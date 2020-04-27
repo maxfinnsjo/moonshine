@@ -1,7 +1,8 @@
-import Express from 'express'
-import Mongoose from 'mongoose'
 import config from '@config'
 import path from 'path'
+import Express from 'express'
+import Mongoose from 'mongoose'
+import BodyParser from 'body-parser'
 import v1Router from '@routes'
 import Webpack from 'webpack'
 import WebpackConfig from '../webpack.config'
@@ -14,6 +15,8 @@ Mongoose.connect(config.databaseUrl, {
 })
 
 const app = Express()
+
+app.use(BodyParser.json())
 
 const compiler = Webpack(WebpackConfig)
 

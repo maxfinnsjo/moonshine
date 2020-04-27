@@ -10,6 +10,7 @@
 					"@client": "./client",
 					"@store": "./client/store",
 					"@components": "./client/components",
+					"@models": "./server/models",
 					"@pages": "./client/pages",
 					"@config": "./server/config",
 					"@routes": "./server/routes",
